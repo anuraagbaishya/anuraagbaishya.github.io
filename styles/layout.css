@@ -5,7 +5,9 @@ Author: OS Templates
 Author URI: http://www.os-templates.com/
 Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
 */
-
+@font-face{
+	font-family: Infinity; src: url('FjordOne-Regular.otf');
+}
 html{overflow-y:scroll;} /* Forces a scrollbar when the viewport is larger than the websites content - CSS3 */
 
 body{margin:0; padding:0; font-size:13px; font-family:Fjord One, serif; color:#919191; background-color:#232323;}
