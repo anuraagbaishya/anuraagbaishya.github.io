@@ -19,9 +19,8 @@ $contactMessage
 ---------------------------------------------------
 ";
 $extraheaders = "From: $contactEmail\r\nReply-To: $contactEmail\r\n";
-if (! mail($recipient, $subject, $message, $extraheaders))
-  echo "Mail did not send for some reason.";
-
-header("Location: ".$redirect);
+$mail_sent = @mail( $to, $subject, $message, $headers );
+//if the message is sent successfully print "Mail sent". Otherwise print "Mail failed" 
+echo $mail_sent ? "Mail sent" : "Mail failed";
 
 ?>
