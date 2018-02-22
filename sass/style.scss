@@ -1,0 +1,71 @@
+@import "compass/reset";
+@import "compass/css3";
+
+//Basic Page Styles
+body {
+    text-align: center;
+    font: 1em/1.5 Georgia, serif;
+    color: #333;
+}
+ 
+a {
+    text-decoration: none;
+}
+ 
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1 {
+    font-family: 'Slabo 27px', serif;
+    font-size: 1.5em;
+    padding: 0 1em;
+}
+
+// Header
+.header {
+    background: linear-gradient(
+                     rgba(20,20,20, .5), 
+                     rgba(20,20,20, .5)),
+                url("../images/background.jpg");
+    background-size: cover;
+    padding: 6em 0 2em;
+    .header-content{
+    	padding: 1em;
+    	color: #fff;
+   	}
+   	h1{
+   		font-size: 2em;
+   		font-style: bold;
+   	}
+ 
+}
+.about{
+	padding: 1em;
+	font-family: 'Slabo 27px', serif;
+	font-size: 1.25em;
+	text-align: justify;
+	.about-text{
+		width: 75%;
+		margin: auto;
+	}
+}
+.avatar {
+	@include box-shadow(0 0 0 px #fff, 0 0 0 4px #ccc, 0 4px 6px #333);
+	@include border-radius(50px);
+	width: 100px;
+	height:100px;
+}
+@media screen and (max-width: 540px) {
+
+	.header{
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.about{
+		padding: 1em 0em 0em 0em;
+	}
+	.about-text{
+		width: 85%;
+	}
+}
