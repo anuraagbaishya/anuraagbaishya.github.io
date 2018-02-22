@@ -64,61 +64,101 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 5, ../sass/style.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 8, ../sass/style.scss */
+html {
+  height: 100%;
+}
+
+/* line 11, ../sass/style.scss */
 body {
   text-align: center;
   font: 1em/1.5 Georgia, serif;
   color: #333;
+  height: 100%;
 }
 
-/* line 11, ../sass/style.scss */
+/* line 17, ../sass/style.scss */
+section {
+  width: 100%;
+  padding: 0 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  height: 100%;
+}
+
+/* line 26, ../sass/style.scss */
 a {
   text-decoration: none;
 }
 
-/* line 15, ../sass/style.scss */
+/* line 30, ../sass/style.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 19, ../sass/style.scss */
+/* line 34, ../sass/style.scss */
 h1 {
   font-family: 'Slabo 27px', serif;
   font-size: 1.5em;
   padding: 0 1em;
 }
 
-/* line 26, ../sass/style.scss */
+/* line 41, ../sass/style.scss */
 .header {
-  background: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("../images/background.jpg");
+  height: 100%;
+  background-position: center;
+  background: linear-gradient(rgba(20, 20, 20, 0.75), rgba(20, 20, 20, 0.75)), url("../images/background.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   padding: 6em 0 2em;
 }
-/* line 33, ../sass/style.scss */
+/* line 51, ../sass/style.scss */
 .header .header-content {
   padding: 1em;
   color: #fff;
 }
-/* line 37, ../sass/style.scss */
+/* line 55, ../sass/style.scss */
 .header h1 {
   font-size: 2em;
   font-style: bold;
 }
+/* line 59, ../sass/style.scss */
+.header h2 {
+  font-size: 1.5em;
+  font-style: bold;
+}
+/* line 63, ../sass/style.scss */
+.header .about-text {
+  padding: 3em 1em 1em 1em;
+  font-family: 'Slabo 27px', serif;
+  font-size: 1.5em;
+  text-align: justify;
+  width: 75%;
+  margin: auto;
+  color: #fff;
+}
 
-/* line 43, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 .about {
   padding: 1em;
   font-family: 'Slabo 27px', serif;
-  font-size: 1.25em;
+  font-size: 1.5em;
   text-align: justify;
 }
-/* line 48, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 .about .about-text {
   width: 75%;
   margin: auto;
+  color: #fff;
 }
 
-/* line 53, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 .avatar {
   -moz-box-shadow: 0 0 0 px #fff, 0 0 0 4px #ccc, 0 4px 6px #333;
   -webkit-box-shadow: 0 0 0 px #fff, 0 0 0 4px #ccc, 0 4px 6px #333;
@@ -131,19 +171,13 @@ h1 {
 }
 
 @media screen and (max-width: 540px) {
-  /* line 61, ../sass/style.scss */
+  /* line 93, ../sass/style.scss */
   .header {
     background-position: center;
     background-repeat: no-repeat;
   }
-
-  /* line 65, ../sass/style.scss */
-  .about {
-    padding: 1em 0em 0em 0em;
-  }
-
-  /* line 68, ../sass/style.scss */
-  .about-text {
+  /* line 96, ../sass/style.scss */
+  .header .about-text {
     width: 85%;
   }
 }
