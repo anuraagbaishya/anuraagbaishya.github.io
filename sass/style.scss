@@ -39,36 +39,36 @@ h1 {
 
 // Header
 .header {
-    height: 100%;
-    background-position: center;
-    background: linear-gradient(
-              rgba(20,20,20, .75), 
-              rgba(20,20,20, .75)),
-              url("../images/background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 6em 0 2em;
-    .header-content{
-        padding: 1em;
-    	  color: #fff;
-   	}
-   	h1{
-   		  font-size: 2em;
-   		  font-style: bold;
-   	}
-    h2{
-      font-size: 1.5em;
-      font-style: bold;
-    }
-    .about-text{
-      padding: 3em 1em 1em 1em;
-      font-family: 'Slabo 27px', serif;
-      font-size: 1.5em;
-      text-align: justify;
-      width: 75%;
-      margin: auto;
-      color: #fff;
-    }
+  height: 100%;
+  background-position: center;
+  background: linear-gradient(
+            rgba(20,20,20, .75), 
+            rgba(20,20,20, .75)),
+            url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 6em 0 2em;
+  .header-content{
+      padding: 1em;
+  	  color: #fff;
+ 	}
+ 	h1{
+ 		  font-size: 2em;
+ 		  font-style: bold;
+ 	}
+  h2{
+    font-size: 1.5em;
+    font-style: bold;
+  }
+  .about-text{
+    padding: 3em 1em 1em 1em;
+    font-family: 'Slabo 27px', serif;
+    font-size: 1.5em;
+    text-align: justify;
+    width: 75%;
+    margin: auto;
+    color: #fff;
+  }
  
 }
 .about{
@@ -87,6 +87,41 @@ h1 {
 	@include border-radius(50px);
 	width: 100px;
 	height:100px;
+}
+.charts{
+
+  height: 90%;
+  #chart-container-1{
+    padding: 0.45em;
+    width: 50%;
+    height: 50%;
+    float: left;
+  }
+  #chart-container-2{
+    padding: 0.45em;
+    width: 50%;
+    height: 50%;
+    float: right;
+  }
+  #chart-container-3{
+    padding: 0.45em;
+    width: 50%;
+    height: 50%;
+    float: left;
+  }
+  #chart-container-4{
+    padding: 0.45em;
+    width: 50%;
+    height: 50%;
+    float: right;
+  }
+  h1{
+    margin: 1em;
+    font-size: 2em;
+    font-style: bold;
+    font-family: 'Slabo 27px', serif;
+  }
+
 }
 @media screen and (max-width: 540px) {
 
